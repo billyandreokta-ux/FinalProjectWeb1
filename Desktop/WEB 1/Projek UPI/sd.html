@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+
+    <style>
+        /* agar dropdown tidak menembus navbar merah saat scroll */
+        #navRed.fixed {
+            position: fixed !important;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <header>
+
+        <!-- ======================== NAVBAR HITAM ======================== -->
+        <div class="bg-black flex px-25 z-40 items-center justify-between" id="navBlack">
+
+            <!-- LEFT AREA (MOBILE: ONLY LOGO) -->
+            <div class="flex items-center">
+                <!-- MOBILE LOGO -->
+                <img src="Images/Logo UPI.png" class="w-12 h-12 block md:hidden ml-3 my-2">
+
+                <!-- DESKTOP MENU -->
+                <ul class="hidden md:flex text-white font-semibold text-sm gap-5 py-3 mt-1">
+                    <li><a href="https://si.upi.edu/" target="_blank" class="hover:text-yellow-300">Sistem Informasi</a></li>
+                    <li><a href="https://sso.upi.edu/cas/login?service=https%3A%2F%2Fstudent.upi.edu%2Fhome"
+                            target="_self" class="hover:text-yellow-300">Mahasiswa</a></li>
+                    <li><a href="https://perpustakaan.upi.edu/" target="_blank"
+                            class="hover:text-yellow-300">Perpusakaan</a></li>
+                    <li><a href="https://cdc.upi.edu/" target="_blank" class="hover:text-yellow-300">Alumni</a></li>
+                    <li><a href="https://www.upi.edu/archive" target="_self" class="hover:text-yellow-300">Arsip</a></li>
+                    <li><a href="https://www.upi.edu/event/36-sppks-upi" target="_self"
+                            class="hover:text-yellow-300">SPPKS</a></li>
+
+                    <!-- Dropdown -->
+                    <li class="relative group">
+                        <a href="#" class="hover:text-yellow-300">Unit/Lembaga</a>
+
+                        <div
+                            class="absolute top-full right-0 bg-white shadow-lg min-w-[380px] py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 -translate-y-2 group-hover:translate-y-0">
+                            <a href="https://dit-pendidikan.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Direktorat Pendidikan</a>
+                            <a href="https://dit-mawa.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Direktorat Kemahasiswaan</a>
+                            <a href="https://dsti.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Direktorat Sistem dan Teknologi Informasi</a>
+                            <a href="https://dit-keuangan.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Direktorat Keuangan</a>
+                            <a href="https://dit-renbang.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Direktorat Perencanaan dan Organisasi</a>
+                            <a href="https://inovasi.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Direktorat Inovasi dan Pusat Unggulan Universitas</a>
+                            <a href="https://birosdm.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Biro Sumber Daya Manusia</a>
+                            <a href="https://bppu.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Badan Pengelola dan Pengembangan Usaha</a>
+                            <a href="https://sai.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Satuan Pengendalian Internal</a>
+                            <a href="https://dia.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Direktorat Urusan Internasional</a>
+                            <a href="https://lppm.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">LPPM</a>
+                            <a href="https://ukpbj.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">UKPBJ</a>
+                            <a href="https://museumpendidikannasional.upi.edu/"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Museum Pendidikan Nasional</a>
+                            <a href="http://perpustakaan.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Perpustakaan</a>
+                            <a href="https://balaibahasa.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Balai Bahasa</a>
+                            <a href="https://islamiccenter.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Islamic Tutorial Center</a>
+                            <a href="#"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100">Asrama Mahasiswa</a>
+                        </div>
+                    </li>
+
+                    <!-- Peta Kampus -->
+                    <li>
+                        <a href="#" class="hover:text-yellow-300 cursor-pointer"
+                            data-src="Images/Screenshot 2025-12-11 153359.png"
+                            onclick="event.preventDefault(); openPopup(this.dataset.src)">
+                            Peta Kampus
+                        </a>
+                    </li>
+
+                    <li><a href="https://ppid.upi.edu/" class="hover:text-yellow-300">PPID</a></li>
+                </ul>
+            </div>
+
+            <!-- RIGHT AREA (FLAG + SEARCH DESKTOP) -->
+            <div class="hidden md:flex">
+                <ul class="flex mx-5 gap-5 py-3 pl-6 mt-1">
+                    <li><img src="Images/inggris.png" class="w-9 h-6"></li>
+                    <li><img src="Images/Indonesia.jpeg" class="w-8 h-5"></li>
+                    <li><a href="https://x.com/upi_official"><img src="Images/Twiterr.png" class="w-4 h-4 mt-1"></a></li>
+                    <li><a href="https://web.facebook.com/upiofficial?_rdc=1&_rdr#"><img src="Images/Facebook.png"
+                                class="w-6 h-6"></a></li>
+                    <li><a href="https://www.instagram.com/upiofficial/"><img src="Images/Instagramm.png"
+                                class="w-4 h-4 mt-1"></a></li>
+                    <li><a href="https://www.tiktok.com/@upi.official"><img src="Images/Tiktok.png"
+                                class="w-6 h-7"></a></li>
+                </ul>
+
+                <div class="flex items-center gap-3">
+                    <div class="border-l-2 border-white h-14"></div>
+                    <a href="#"><img src="Images/Search.png" class="w-6 h-7 hover:text-yellow-300"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Popup Image -->
+        <div id="popup" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50"
+            onclick="closePopup()">
+            <img id="popupImg" class="w-full h-full object-contain" onclick="event.stopPropagation()">
+            <button onclick="event.stopPropagation(); closePopup()"
+                class="absolute top-5 right-5 bg-red-600 hover:bg-red-700 text-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold">×</button>
+        </div>
+
+
+        <!-- ======================== NAVBAR MERAH ======================== -->
+        <div class="bg-red-600 flex z-30 px-3 justify-between items-center" id="navRed">
+
+            <!-- LEFT LOGOS -->
+            <div class="flex md:ml-24 md:gap-4 md:my-5">
+
+                <!-- MOBILE: LOGO UPI + LOGO DIKTISAINTEK VERTICAL -->
+                <div class="flex flex-col items-center justify-center md:hidden py-3">
+                    <img src="Images/Logo UPI.png" class="w-14 h-14 mb-2">
+                    <img src="Images/Diktisaintek logo.png" class="w-20 h-10">
+                </div>
+
+                <!-- DESKTOP -->
+                <div class="hidden md:flex gap-4 my-5">
+                    <a href="#"><img src="Images/Logo UPI.png" class="w-50 h-15"></a>
+                    <img src="Images/Diktisaintek logo.png" class="w-35 h-10 mt-3">
+
+                    <a href="#"><img src="Images/Gedung Siliwangi.png" class="w-20 h-12 ml-9 mt-2"></a>
+                </div>
+            </div>
+
+            <!-- DESKTOP MENU -->
+            <ul class="hidden md:flex ml-11 text-sm my-10 text-white gap-8 font-semibold">
+                <li><a href="Biodata.html" target="_blank" class="hover:text-yellow-300">Biodata</a></li>
+                <li><a href="contact_us.html" target="_blank" class="hover:text-yellow-300">Contact Us</a></li>
+                <li><a href="posts.html" target="_blank" class="hover:text-yellow-300">Additional Page</a></li>
+                <li><a href="freepage.html" target="_blank" class="hover:text-yellow-300">Free Content</a></li>
+                <li><a href="https://fti.unai.edu/" target="_blank" class="hover:text-yellow-300">FTI UNAI</a></li>
+                <li><a href="https://unai.edu/" target="_blank" class="hover:text-yellow-300">UNAI Website</a></li>
+            </ul>
+
+            <!-- MOBILE BURGER MENU -->
+            <button onclick="toggleMenu()"
+                class="md:hidden text-white text-3xl absolute right-4 top-3">☰</button>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu"
+            class="hidden flex-col bg-red-700 text-white text-base font-semibold px-6 py-4 space-y-3 md:hidden">
+
+            <!-- Semua menu dari navbar hitam + navbar merah -->
+            <a href="https://si.upi.edu/" class="block">Sistem Informasi</a>
+            <a href="https://student.upi.edu/" class="block">Mahasiswa</a>
+            <a href="https://perpustakaan.upi.edu/" class="block">Perpustakaan</a>
+            <a href="https://cdc.upi.edu/" class="block">Alumni</a>
+            <a href="https://www.upi.edu/archive" class="block">Arsip</a>
+            <a href="https://www.upi.edu/event/36-sppks-upi" class="block">SPPKS</a>
+            <a href="#" class="block">Unit & Lembaga</a>
+            <a href="#" onclick="openPopup('Images/Screenshot 2025-12-11 153359.png')" class="block">Peta Kampus</a>
+            <a href="https://ppid.upi.edu/" class="block">PPID</a>
+
+            <hr class="border-gray-300">
+
+            <a href="Biodata.html" class="block">Biodata</a>
+            <a href="contact_us.html" class="block">Contact Us</a>
+            <a href="posts.html" class="block">Additional Page</a>
+            <a href="freepage.html" class="block">Free Content</a>
+            <a href="https://fti.unai.edu/" class="block">FTI UNAI</a>
+            <a href="https://unai.edu/" class="block">UNAI Website</a>
+
+        </div>
+
+    </header>
+
+    <!-- STICKY RED BAR SCRIPT -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const navBlack = document.getElementById('navBlack');
+            const navRed = document.getElementById('navRed');
+
+            const blackNavBottom = navBlack.getBoundingClientRect().bottom;
+
+            if (blackNavBottom <= 0) {
+                navRed.classList.add('fixed', 'top-0', 'left-0', 'w-screen');
+                navRed.style.zIndex = '40';
+            } else {
+                navRed.classList.remove('fixed', 'top-0', 'left-0', 'w-screen');
+                navRed.style.zIndex = '30';
+            }
+        });
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openPopup(src) {
+            const popup = document.getElementById('popup');
+            const img = document.getElementById('popupImg');
+            img.src = src;
+            popup.classList.remove('hidden');
+            popup.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.classList.add('hidden');
+            popup.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closePopup();
+        });
+    </script>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main>
+
+        <img src="Images/UPI image.png">
+
+        <div class="flex py-6 px-10 border-l-4 shadow-lg shadow-gray-300 border-gray-300 mx-23 my-12">
+            <div>
+                <img src="Images/Prof-Sunaryo.jpg" class=" rounded-full w-35 h-33 mx-10">
+            </div>
+
+            <div class="py-10 px-10">
+                <p>Pendidikan kehidupan nyata mengintegrasikan belajar, hidup, dan bekerja sebagai keutuhan pengalaman peserta didik. </p>
+                <p>- Prof. Dr. H. Sunaryo Kartadinata, M.Pd</p>
+            </div>
+        </div>
+
+        <!-- BERITA -->
+        <div>
+            <div class="flex justify-center items-center gap-2">
+                <img src="Images/OL.png" class="w-8 h-8 mt-1">
+                <p class="text-red-500 text-[2.50rem] font-medium ">Berita</p>
+            </div>
+
+            <img src="Images/Screenshot 2025-12-03 233539.png" class="mx-auto mt-5 py-5 w-50 h-23">
+        </div>
+
+        <!-- AGENDA -->
+        <div class="mt-17">
+            <div class="flex justify-center items-center gap-2">
+                <img src="Images/OL.png" class="w-8 h-8 mt-1">
+                <p class="text-red-500 text-[2.50rem] font-medium ">Agenda</p>
+            </div>
+
+            <div class="px-24 py-20">
+                <h2 class="text-2xl font-normal">Informasi</h2>
+                <div class="w-10 h-[2px] bg-red-400 mt-4 mb-5"></div>
+                <p class="text-gray-600 mt-4">Tidak ada agenda</p>
+            </div>
+        </div>
+
+        <!-- VIDEO -->
+        <div>
+            <div class="flex justify-center items-center gap-2">
+                <img src="Images/OL.png" class="w-8 h-8 mt-1">
+                <p class="text-red-500 text-[2.50rem] font-medium ">Video</p>
+            </div>
+
+            <div class="flex mx-20 py-10">
+                <a href="https://www.youtube.com/watch?v=lQ8RtU4MkJ0"><img src="Images/Video.jpg" class="px-4"></a>
+                <a href="https://www.youtube.com/watch?v=D3UL8wGBacs"><img src="Images/Video2.jpg" class="px-4"></a>
+            </div>
+
+            <ul class="flex mx-24 my-30 gap-8">
+                <li><a href="https://ppid.upi.edu/"><img src="Images/Gambar1.png" class="border border-red-500 w-90 h-16"></a></li>
+                <li><a href="https://ult.upi.edu/"><img src="Images/Gambar2.png" class="border border-red-500 w-95 h-16"></a></li>
+                <li><a href="https://tv.upi.edu/"><img src="Images/Gambar3.png" class="border border-red-500 w-95 h-16"></a></li>
+                <li><a href="http://lapor.upi.edu/"><img src="Images/Gambar4.png" class="border border-red-500 w-95 h-16"></a></li>
+                <li><a href="https://humas.upi.edu/"><img src="Images/Gambar5.png" class="border border-red-500 w-95 h-16"></a></li>
+                <li><a href="https://dit-keuangan.upi.edu/read/page/wajib-berkala"><img src="Images/Gambar6.png"
+                            class="border border-red-500 w-95 h-16"></a></li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="flex bg-[#6c757d] px-20 py-16 items-start w-full">
+            <div class="w-1/4">
+                <img src="Images/Logo UPI.png" class="w-50 h-auto mt-10">
+            </div>
+
+            <div class="w-1/4 px-8">
+                <h2 class="text-xl font-base text-white mb-3">Kontak kami</h2>
+                <div class="w-12 h-[2px] bg-white mb-4"></div>
+                <p class="text-gray-200 text-sm leading-relaxed">
+                    Universitas Pendidikan Indonesia<br>
+                    Jl. Dr. Setiabudhi No. 229 Bandung 40154<br>
+                    Jawa Barat - Indonesia<br>
+                    E-mail: sekuniv_upi@upi.edu
+                </p>
+            </div>
+
+            <div class="w-1/4 px-8">
+                <h2 class="text-xl font-base text-white mb-3">Tautan penting</h2>
+                <div class="w-12 h-[2px] bg-white mb-4"></div>
+                <p class="text-gray-200 text-sm leading-relaxed">
+                    Portal Mahasiswa<br>
+                    Perpustakaan<br>
+                    Jurnal UPI
+                </p>
+            </div>
+
+            <div class="w-1/4 px-8">
+                <h2 class="text-xl font-base text-white mb-3">Ikuti kami</h2>
+                <div class="w-12 h-[2px] bg-white mb-4"></div>
+                <div class="flex gap-4 text-white text-2xl">
+                    <a href="https://x.com/upi_official"><img src="Images/Twiterr.png" class="w-4 h-4 mt-1"></a>
+                    <a href="https://web.facebook.com/upiofficial?_rdc=1&_rdr#"><img src="Images/Facebook.png"
+                            class="w-6 h-6"></a>
+                    <a href="https://www.instagram.com/upiofficial/"><img src="Images/Instagramm.png"
+                            class="w-4 h-4 mt-1"></a>
+                    <a href="https://www.tiktok.com/@upi.official"><img src="Images/Tiktok.png" class="w-6 h-7"></a>
+                </div>
+            </div>
+        </div>
+
+        <p class="bg-black text-base py-5 text-white text-center">© Universitas Pendidikan Indonesia 2021</p>
+    </footer>
+
+    <img src="Images/Disabilitas.png" class="fixed bottom-2 right-1 w-21 h-20 z-50">
+</body>
+
+</html>

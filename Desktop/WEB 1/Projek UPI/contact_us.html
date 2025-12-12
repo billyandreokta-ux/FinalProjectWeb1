@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Registration Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="bg-black flex flex-col md:flex-row px-4 md:px-25 z-40" id="navBlack">
+            <div class="hidden md:block flex-1">
+                <ul class="flex text-white font-semibold text-sm gap-5 py-3 mt-1">
+                    <li><a href="https://si.upi.edu/" target="_blank" class="hover:text-yellow-300">Sistem Informasi</a>
+                    </li>
+                    <li><a href="https://sso.upi.edu/cas/login?service=https%3A%2F%2Fstudent.upi.edu%2Fhome"
+                            target="_self" class="hover:text-yellow-300">Mahasiswa</a></li>
+                    <li><a href="https://perpustakaan.upi.edu/" target="_blank"
+                            class="hover:text-yellow-300">Perpusakaan</a></li>
+                    <li><a href="https://cdc.upi.edu/" target="_blank" class="hover:text-yellow-300">Alumni</a></li>
+                    <li><a href="https://www.upi.edu/archive" target="_self" class="hover:text-yellow-300">Arsip</a>
+                    </li>
+                    <li><a href="https://www.upi.edu/event/36-sppks-upi" target="_self"
+                            class="hover:text-yellow-300">SPPKS</a></li>
+                    <li class="relative group">
+                        <a href="#" class="hover:text-yellow-300">Unit/Lembaga</a>
+                        <div
+                            class="absolute top-full right-0 bg-white shadow-lg min-w-[380px] py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 -translate-y-2 group-hover:translate-y-0">
+                            <a href="https://dit-pendidikan.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Direktorat Pendidikan</a>
+                            <a href="https://dit-mawa.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Direktorat Kemahasiswaan</a>
+                            <a href="https://dsti.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Direktorat Sistem dan Teknologi Informasi</a>
+                            <a href="https://dit-keuangan.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Direktorat Keuangan</a>
+                            <a href="https://dit-renbang.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Direktorat Perencanaan dan Organisasi</a>
+                            <a href="https://inovasi.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Direktorat Inovasi dan Pusat Unggulan Universitas</a>
+                            <a href="https://birosdm.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Biro Sumber Daya Manusia</a>
+                            <a href="https://bppu.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Badan Pengelola dan Pengembangan Usaha</a>
+                            <a href="https://sai.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Satuan Pengendalian Internal</a>
+                            <a href="https://dia.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Direktorat Urusan Internasional</a>
+                            <a href="https://lppm.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                LPPM</a>
+                            <a href="https://ukpbj.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                UKPBJ</a>
+                            <a href="https://museumpendidikannasional.upi.edu/"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Museum Pendidikan Nasional</a>
+                            <a href="http://perpustakaan.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Perpustakaan</a>
+                            <a href="https://balaibahasa.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Balai Bahasa</a>
+                            <a href="https://islamiccenter.upi.edu/" target="_blank"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Islamic Tutorial Center</a>
+                            <a href="#"
+                                class="block px-6 py-2 text-base text-gray-700 hover:bg-gray-100 transition-all duration-300">
+                                Asrama Mahasiswa</a>
+                        </div>
+                    </li>
+                    <li><a href="#" class="hover:text-yellow-300 cursor-pointer"
+                            data-src="Images/Screenshot 2025-12-11 153359.png"
+                            onclick="event.preventDefault(); openPopup(this.dataset.src)">
+                            Peta Kampus
+                        </a>
+                    </li>
+
+                    <div id="popup" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50"
+                        onclick="closePopup()">
+                        <img id="popupImg" class="w-full h-full object-contain" onclick="event.stopPropagation()">
+                        <button onclick="event.stopPropagation(); closePopup()"
+                            class="absolute top-5 right-5 bg-red-600 hover:bg-red-700 text-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold">×</button>
+                    </div>
+
+                    <script>
+                        function openPopup(src) {
+                            const popup = document.getElementById('popup');
+                            const img = document.getElementById('popupImg');
+                            img.src = src;
+                            popup.classList.remove('hidden');
+                            popup.classList.add('flex');
+                            document.body.style.overflow = 'hidden';
+                        }
+                        function closePopup() {
+                            const popup = document.getElementById('popup');
+                            popup.classList.add('hidden');
+                            popup.classList.remove('flex');
+                            document.body.style.overflow = '';
+                        }
+                        document.addEventListener('keydown', function (e) {
+                            if (e.key === 'Escape') {
+                                closePopup();
+                            }
+                        });
+                    </script>
+                    <li><a href="https://ppid.upi.edu/" target="_self" class="hover:text-yellow-300">PPID</a></li>
+                </ul>
+            </div>
+
+            <div class="hidden md:flex">
+                <ul class="flex mx-5 gap-5 py-3 pl-6 mt-1">
+                    <li><img src="Images/inggris.png" class="w-9 h-6 "></li>
+                    <li><img src="Images/Indonesia.jpeg" class="w-8 h-5"></li>
+                    <li><a href="https://x.com/upi_official" target="_blank"><img src="Images/Twiterr.png"
+                                class="w-4 h-4 mt-1"></a></li>
+                    <li><a href="https://web.facebook.com/upiofficial?_rdc=1&_rdr#" target="_blank"><img
+                                src="Images/Facebook.png" class="w-6 h-6"></a></li>
+                    <li><a href="https://www.instagram.com/upiofficial/" target="_blank"><img
+                                src="Images/Instagramm.png" class="w-4 h-4 mt-1"></a></li>
+                    <li><a href="https://www.tiktok.com/@upi.official" target="_blank"><img src="Images/Tiktok.png"
+                                class="w-6 h-7"></a></li>
+                </ul>
+            </div>
+
+            <div class="hidden md:block">
+                <div class="flex items-center gap-3 py-3">
+                    <div class="border-l-2 border-white h-14"></div>
+                    <a href="#"><img src="Images/Search.png" class="w-6 h-7 hover:text-yellow-300"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-red-600 flex flex-col md:flex-row z-30 px-3 justify-between items-center w-full" id="navRed">
+
+            <div class="flex justify-between items-center w-full md:w-auto my-3 md:my-5 md:ml-24">
+                <div class="flex gap-2 md:gap-4 items-center">
+                    <a href="file:///C:/Users/BILLY/Desktop/WEB%201/Projek%20UPI/index.html#" target="_self"><img
+                            src="Images/Logo UPI.png" class="w-32 md:w-50 h-auto md:h-15"></a>
+                    <img src="Images/Diktisaintek logo.png" class="w-24 md:w-35 h-auto md:h-10 mt-0 md:mt-3">
+                    <a href="file:///C:/Users/BILLY/Desktop/WEB%201/Projek%20UPI/index2.html#" target="_self"><img
+                            src="Images/Gedung Siliwangi.png"
+                            class="w-12 md:w-20 h-auto md:h-12 md:ml-9 mt-0 md:mt-2"></a>
+                </div>
+                <button id="menuBtn"
+                    class="block md:hidden text-white border border-white rounded px-2 py-1 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobileMenu" class="hidden w-full md:block md:w-auto">
+                <ul
+                    class="flex flex-col md:flex-row md:ml-11 text-sm my-4 md:my-10 text-white gap-4 md:gap-8 font-semibold text-center md:text-left">
+                    <li class="relative group"><a href="Biodata.html" target="_blank"
+                            class="hover:text-yellow-300 block py-2 md:py-0">Biodata</a>
+                    </li>
+                    <li><a href="contact_us.html" target="_blank"
+                            class="hover:text-yellow-300 block py-2 md:py-0">Contact Us</a></li>
+                    <li><a href="posts.html" target="_blank" class="hover:text-yellow-300 block py-2 md:py-0">Additional
+                            Page</a></li>
+                    <li><a href="freepage.html" target="_blank" class="hover:text-yellow-300 block py-2 md:py-0">Free
+                            Content</a></li>
+                    <li><a href="https://fti.unai.edu/" target="_blank"
+                            class="hover:text-yellow-300 block py-2 md:py-0">FTI UNAI</a></li>
+                    <li><a href="https://unai.edu/" target="_blank"
+                            class="hover:text-yellow-300 block py-2 md:py-0">UNAI Website</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // Script untuk hamburger menu
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Script Scroll Navbar
+        window.addEventListener('scroll', function () {
+            const navBlack = document.getElementById('navBlack');
+            const navRed = document.getElementById('navRed');
+
+            // Cek apakah navBlack ada (di mobile mungkin hidden parentnya)
+            // Namun logic di bawah tetap valid
+            const blackNavBottom = navBlack.getBoundingClientRect().bottom;
+
+            if (blackNavBottom <= 0) {
+                navRed.classList.add('fixed');
+                navRed.classList.add('top-0');
+                navRed.classList.add('left-0');
+                navRed.classList.add('w-screen'); // Menggunakan w-full atau w-screen
+                navRed.style.zIndex = '40';
+            } else {
+                navRed.classList.remove('fixed');
+                navRed.classList.remove('top-0');
+                navRed.classList.remove('left-0');
+                navRed.classList.remove('w-screen');
+                navRed.style.zIndex = '30';
+            }
+        });
+    </script>
+
+    <div
+        class="antialiased bg-gradient-to-b from-red-900 via-red-500 to-white text-slate-900 min-h-screen flex flex-col">
+
+
+
+        <!-- PAGE TITLE -->
+        <section class="text-center mt-10 mb-6">
+            <h2 class="text-4xl font-extrabold text-white drop-shadow-lg">Contact Us</h2>
+            <p class="text-slate-800 font-medium mt-2">Student Registration Form</p>
+        </section>
+
+        <!-- FORM CONTAINER -->
+        <div class="max-w-4xl mx-auto bg-white/80 backdrop-blur-lg shadow-xl rounded-2xl p-8 mb-20">
+
+            <form id="regForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Full Name -->
+                <div class="flex flex-col">
+                    <label class="font-semibold mb-1">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name"
+                        class="p-3 rounded-lg border focus:ring-4 focus:ring-red-400 focus:outline-none">
+                </div>
+
+                <!-- Student ID -->
+                <div class="flex flex-col">
+                    <label class="font-semibold mb-1">Student ID (NIM)</label>
+                    <input type="text" id="nim" placeholder="Ex: 123456789"
+                        class="p-3 rounded-lg border focus:ring-4 focus:ring-red-400 focus:outline-none">
+                </div>
+
+                <!-- Email -->
+                <div class="flex flex-col">
+                    <label class="font-semibold mb-1">Email Address</label>
+                    <input type="email" id="email" placeholder="example@student.com"
+                        class="p-3 rounded-lg border focus:ring-4 focus:ring-red-400 focus:outline-none">
+                </div>
+
+                <!-- Faculty -->
+                <div class="flex flex-col">
+                    <label class="font-semibold mb-1">Faculty / Major</label>
+                    <select id="faculty"
+                        class="p-3 rounded-lg border focus:ring-4 focus:ring-red-400 focus:outline-none">
+                        <option value="">Select your faculty</option>
+                        <option value="Engineering">Information Technology</option>
+                        <option value="Business">Economic</option>
+                        <option value="Computer Science">Education</option>
+                        <option value="Psychology">Phylosophy</option>
+                        <option value="Design">Nursing</option>
+                        <option value="Design">Science</option>
+                    </select>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="flex flex-col">
+                    <label class="font-semibold mb-1">Date of Birth</label>
+                    <input type="date" id="dob"
+                        class="p-3 rounded-lg border focus:ring-4 focus:ring-red-400 focus:outline-none">
+                </div>
+
+                <!-- Gender -->
+                <div class="flex flex-col">
+                    <label class="font-semibold mb-1">Gender</label>
+                    <div class="flex space-x-6 mt-2">
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="gender" value="Male" />
+                            <span>Male</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="gender" value="Female" />
+                            <span>Female</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="flex flex-col md:col-span-2">
+                    <label class="font-semibold mb-1">Address</label>
+                    <textarea id="address" placeholder="Enter your full address"
+                        class="p-3 rounded-lg border h-24 focus:ring-4 focus:ring-red-400 focus:outline-none"></textarea>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="flex flex-col md:col-span-2">
+                    <label class="font-semibold mb-1">Phone Number</label>
+                    <input type="text" id="phone" placeholder="Ex: 081234567890"
+                        class="p-3 rounded-lg border focus:ring-4 focus:ring-red-400 focus:outline-none">
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <div class="md:col-span-2 text-center mt-4">
+                    <button type="submit"
+                        class="bg-red-600 hover:bg-red-700 text-white font-semibold px-10 py-3 rounded-xl shadow-lg transition">Submit</button>
+                </div>
+            </form>
+
+            <!-- SUCCESS MESSAGE -->
+            <p id="successMsg" class="hidden text-green-700 font-semibold text-center mt-6">Form submitted successfully!
+            </p>
+        </div>
+
+        <!--Footer abu-abu-->
+        <footer>
+            <div
+                class="flex flex-col md:flex-row bg-[#6c757d] px-6 md:px-20 py-10 md:py-16 items-start w-full gap-8 md:gap-0">
+                <div class="w-full md:w-1/4 flex justify-center md:justify-start">
+                    <img src="Images/Logo UPI.png" class="w-40 md:w-50 h-auto mt-0 md:mt-10">
+                </div>
+
+                <div class="w-full md:w-1/4 px-0 md:px-8">
+                    <h2 class="text-xl font-base text-white mb-3">Kontak kami</h2>
+                    <div class="w-12 h-[2px] bg-white mb-4"></div>
+                    <p class="text-gray-200 text-sm leading-relaxed">
+                        Universitas Pendidikan Indonesia<br>
+                        Jl. Dr. Setiabudhi No. 229 Bandung 40154<br>
+                        Jawa Barat - Indonesia<br>
+                        E-mail: sekuniv_upi@upi.edu
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/4 px-0 md:px-8">
+                    <h2 class="text-xl font-base text-white mb-3">Tautan penting</h2>
+                    <div class="w-12 h-[2px] bg-white mb-4"></div>
+                    <p class="text-gray-200 text-sm leading-relaxed">
+                        Portal Mahasiswa<br>
+                        Perpustakaan<br>
+                        Jurnal UPI
+                    </p>
+                </div>
+
+                <div class="w-full md:w-1/4 px-0 md:px-8">
+                    <h2 class="text-xl font-base text-white mb-3">Ikuti kami</h2>
+                    <div class="w-12 h-[2px] bg-white mb-4"></div>
+                    <div class="flex gap-4 text-white text-2xl">
+                        <a href="https://x.com/upi_official" target="_blank"><img src="Images/Twiterr.png"
+                                class="w-4 h-4 mt-1"></a>
+                        <a href="https://web.facebook.com/upiofficial?_rdc=1&_rdr#" target="_blank"><img
+                                src="Images/Facebook.png" class="w-6 h-6"></a></li>
+                        <a href="https://www.instagram.com/upiofficial/" target="_blank"><img
+                                src="Images/Instagramm.png" class="w-4 h-4 mt-1"></a>
+                        <a href="https://www.tiktok.com/@upi.official" target="_blank"><img src="Images/Tiktok.png"
+                                class="w-6 h-7"></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="bg-black text-sm md:text-base py-5 text-white text-center px-4">© Universitas Pendidikan
+                    Indonesia
+                    2021</p>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT VALIDATION -->
+        <script>
+            document.getElementById("regForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const nim = document.getElementById("nim").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const faculty = document.getElementById("faculty").value;
+                const dob = document.getElementById("dob").value;
+                const gender = document.querySelector("input[name='gender']:checked");
+                const address = document.getElementById("address").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+
+                if (!name || !nim || !email || !faculty || !dob || !gender || !address || !phone) {
+                    alert("Please fill in all fields.");
+                    return;
+                }
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    alert("Please enter a valid email.");
+                    return;
+                }
+
+                if (!/^[0-9]+$/.test(phone)) {
+                    alert("Phone number must contain only digits.");
+                    return;
+                }
+                if (phone.length < 10) {
+                    alert("Phone number must be at least 10 digits.");
+                    return;
+                }
+
+                document.getElementById("successMsg").classList.remove("hidden");
+                document.getElementById("regForm").reset();
+            });
+        </script>
+    </div>
+</body>
+
+</html>
